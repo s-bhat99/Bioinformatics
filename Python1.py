@@ -127,3 +127,60 @@ print(x)#[1,2,3,4]
 #enum function in string/list
 s='okay'
 print(list(enumerate(s)))#notice that it is a list of TUPLES
+
+#file handling
+import os
+print(os.getcwd())#gives the current working directory
+#os.chdir(#path)- changes the path of the terminal
+#absolute and relative paths:
+    #.->current directory
+    #..->Parent directory
+print()
+#plain text files:
+#1. Call the open() function to return a file object
+#2. Call read() or write() method on file object (default mode is read mode)
+#3. Close the file by calling close() method on file object 
+
+f=open(r'C:\Users\Shriram Bhat\Desktop\ok cool.txt') #f is the file object
+a=f.read() #this contains the text stored in the file as a string
+print(a) #prints the text in the file
+f.close()
+
+#opening the files in different modes
+#1. Write mode, which overwrites the existing text
+f=open(r'C:\Users\Shriram Bhat\Desktop\ok cool.txt','w')#notice the ,'w'
+f.write('Hello world this is in write mode')
+f.close()
+
+#2. Append mode
+f=open(r'C:\Users\Shriram Bhat\Desktop\ok cool.txt','a')
+f.write('. I am continuing the previous text in append mode. Lol')
+f.close()
+
+#------------------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------
+#class is a blueprint for an object
+def main():
+    print('Sample text in main')
+class Duck:
+    def quack(self):
+        print('Quack')
+    def walk(self):
+        print('The duck is walking')
+
+#object is an instance of the class
+
+donald=Duck()
+donald.quack()
+donald.walk()
+
+#self and init:
+#__init__ works like a constructor and is used to initialize values passed to objects of a class
+#since python is an interpreter, and functions defined after main() won't be recognized unless this line is added:
+if __name__=="__main__":
+    main() #because of the location of this statement, main is executed after this line is interpreted
+            #Create your objects within main
+#self is an instance of the class, with which we access the attributes of a class
+
+#-----------------------------------------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------------------------------------
