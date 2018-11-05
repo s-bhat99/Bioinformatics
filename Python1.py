@@ -123,3 +123,7 @@ a.update([1,2]) #set is an unordered collection of data. Redundant items are rem
 x=[1,1,1,2,3,4,3,4,3,2,1,2,3,4,4,3,2,2,2]
 x=list(set(x))
 print(x)#[1,2,3,4]
+
+#enum function in string/list
+s='okay'
+print(list(enumerate(s)))#notice that it is a list of TUPLES
